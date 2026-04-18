@@ -1,1 +1,4 @@
 flask
+boto3
+upstash_redis
+dotenv

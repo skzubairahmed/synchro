@@ -1,19 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
 
 export default function Home() {
   let [data, setData] = useState("Loading flask...");
-
-  useEffect(() => {
-    fetch("/api/test")
-            .then(res => res.json())
-            .then(dat => setData(dat.message))
-            .catch(() => setData("Flask not found"));
-  }, []);
+  let [activeTab, setActiveTab] = useState("home");
 
   return (
     <div>
-      <p>{data}</p>
+      <Navbar />
     </div>
   );
 }
